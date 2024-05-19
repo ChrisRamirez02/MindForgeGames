@@ -1,3 +1,14 @@
+@keyframes fade-down {
+    0% {
+       opacity: 0;
+       transform: translateY(-30px) scale(0.9);
+    }
+     100% {
+       opacity: 1;
+       transform: translateY(0px) scale(1);
+     }
+   }
+
 body {
     color: #fff;
 }
@@ -10,6 +21,7 @@ body {
     background: rgb(18, 93, 255);
     font-size: 3rem;
     min-width: 80rem;
+    animation: fade-down 1.0s;
 }
 
 .choice-container:hover {
@@ -27,6 +39,7 @@ body {
 .choice-text {
     padding: 2rem;
     width: 100%;
+    animation: fade-down 1.0s;
 }
 
 .correct {
@@ -42,6 +55,7 @@ body {
 #hud {
     display: flex;
     justify-content: space-between;
+    animation: fade-down 0.5s;
 }
 
 .hud-prefix {

@@ -10,50 +10,90 @@
     padding: 0;
 }
 
-.container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Nova Square', cursive;
-    padding: 2rem;
-}
+@keyframes fade-down {
+    0% {
+       opacity: 0;
+       transform: translateY(-30px) scale(0.9);
+    }
+     100% {
+       opacity: 1;
+       transform: translateY(0px) scale(1);
+     }
+   }
 
-.flex-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+   @import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 
-h1 {
-    font-size: 3rem;
-    color: white;
-    margin-bottom: 2rem;
-}
-
-h2 {
-    font-size: 2.5rem;
-    color: white;
-    margin-bottom: 1.5rem;
-}
-
-.subject-group {
-    margin-bottom: 3rem;
-}
-
-.btn {
-    font-size: 2rem;
-    padding: 1.5rem 3rem;
-    text-align: center;
-    text-decoration: none;
-    color: rgb(28, 26, 26);
-    background: linear-gradient(90deg, rgb(18,92,255) 0%, rgb(0, 102, 255) 100%);
-    border-radius: 4px;
-    transition: transform 0.3s ease;
-}
-
-.btn:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-}
+   :root {
+       background-color: rgb(29, 26, 26);
+   }
+   
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+   }
+   
+   .container {
+       width: 100vw;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-family: 'Nova Square', cursive;
+       padding: 1rem; /* Reduced padding */
+   }
+   
+   .flex-column {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+   
+   h1 {
+       font-size: 2.5rem; /* Reduced font size */
+       color: white;
+       margin-bottom: 1.5rem; /* Reduced margin */
+   }
+   
+   h2 {
+       font-size: 2rem; /* Reduced font size */
+       color: white;
+       margin-bottom: 1rem; /* Reduced margin */
+   }
+   
+   .subject-group {
+       margin-bottom: 2rem; /* Reduced margin */
+   }
+   
+   .btn {
+       font-size: 1.5rem; /* Reduced font size */
+       padding: 1rem 2rem; /* Reduced padding */
+       text-align: center;
+       text-decoration: none;
+       color: rgb(28, 26, 26);
+       background: linear-gradient(90deg, rgb(18,92,255) 0%, rgb(0, 102, 255) 100%);
+       border-radius: 4px;
+       transition: transform 0.3s ease;
+   }
+   
+   .btn:hover {
+       cursor: pointer;
+       transform: scale(1.05);
+   }
+   
+   /* Media Queries for Mobile Devices */
+   @media only screen and (max-width: 600px) {
+       h1 {
+           font-size: 2rem; /* Further reduced font size */
+       }
+   
+       h2 {
+           font-size: 1.5rem; /* Further reduced font size */
+       }
+   
+       .btn {
+           font-size: 1rem; /* Further reduced font size */
+           padding: 0.5rem 1rem; /* Further reduced padding */
+       }
+   }
+   

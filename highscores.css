@@ -1,3 +1,14 @@
+@keyframes fade-down {
+    0% {
+       opacity: 0;
+       transform: translateY(-30px) scale(0.9);
+    }
+     100% {
+       opacity: 1;
+       transform: translateY(0px) scale(1);
+     }
+   }
+
 body {
     color: white;
 }
@@ -5,6 +16,7 @@ body {
 #highScoresList {
     list-style: none;
     margin-bottom: 4rem;
+    animation: fade-down 1.2s;
 }
 
 .high-score {
